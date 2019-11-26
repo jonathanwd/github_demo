@@ -13,7 +13,7 @@ You may need to restart the VM after installation.
 ## Download DumpIt
 * Downloading DumpIt requires an account from https://my.comae.com/. Comae accounts are free for personal non-commercial use. 
 * Once you have created an account, DumpIt can be downloaded from https://my.comae.com/tools/.
-* Save the zip file onto the VM and extract the contents. 
+* Save the zip file onto the VM and extract its contents. 
 
 ## Obtain Memory Image Using DumpIt
 * Open a command prompt on the VM.
@@ -26,7 +26,7 @@ You may need to restart the VM after installation.
 
 ### Dump Registry Hives
 * Run  `volatility_2.6_win64_standalone.exe -f image.dmp --profile=Win7SP1x64 hivelist` to see the registry hive offsets.
-* We will need the SYSTEM (-y) and SAM (-s) virtual offests.
+* We will need the SYSTEM (-y) and SAM (-s) virtual offests (0xfffff8a000024010 and 0xfffff8a00278c010 in this example).
 
 ### Dump Password Hashes
 * Run `volatility_2.6_win64_standalone.exe -f image.dmp --profile=Win7SP1x64 hashdump -y 0xfffff8a000024010 -s 0xfffff8a00278c010 > hashes.txt` to dump the password hashes.
