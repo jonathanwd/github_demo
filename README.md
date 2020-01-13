@@ -29,7 +29,7 @@ You may need to restart the VM after installation.
 * We will need the SYSTEM (-y) and SAM (-s) virtual offests (0xfffff8a000024010 and 0xfffff8a00278c010 in this example).
 
 ### Dump Password Hashes
-* Run `volatility_2.6_win64_standalone.exe -f image.dmp --profile=Win7SP1x64 hashdump -y 0xfffff8a000024010 -s 0xfffff8a00278c010 > hashes.txt` to dump the password hashes.
+* Run `volatility_2.6_win64_standalone.exe -f image.dmp --profile=Win7SP1x64 hashdump -y 0xfffff8a000024010 -s 0xfffff8a00278c010 > hashes.txt` to dump the password hashes. Be sure to replace the virtual offsets with the ones you found in the previous step. 
 * View the hashes in the command prompt: `type hashes.txt`
 * Copy the hashes to https://crackstation.net/ to crack the passwords (the NTLM hash is the part between the third colon and the final three colons).
 
