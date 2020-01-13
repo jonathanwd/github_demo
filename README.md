@@ -2,8 +2,7 @@
 
 ## Download and Install Windows 7 Virtual Machine
 * Windows 7 VMs can be downloaded from Microsoft at https://developer.microsoft.com/en-us/microsoft-edge/tools/vms/. 
-These instuctions were tested on the "IE11 on Win7" VM for VMware.
-They will only work on a 64-bit VM.
+These instructions will only work on a 64-bit VM and were tested on the "IE11 on Win7" VM for VMware.
 * Install the VM on the platform of your choice. These VMs expire after 90 days, so Microsoft recommends creating a snapshot after the initial installation. 
 You may need to restart the VM after installation. 
 
