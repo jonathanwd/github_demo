@@ -11,7 +11,7 @@ While there are more recent versions of Volatility, we will use version 2.5 beca
 * Save the Volatility zip file onto the VM and extract its contents.
 
 ## Obtain Memory Image Using DumpIt
-* You can download the DumpIt executable from https://github.com/thimbleweed/All-In-USB/tree/master/utilities/DumpIt
+* Download the DumpIt executable from https://github.com/thimbleweed/All-In-USB/tree/master/utilities/DumpIt
 * Open a command prompt on the VM.
 * Navigate to the folder containing "DumpIt.exe".
 * Run DumpIt: `DumpIt.exe`. Dumpit will produce a memory image with a name similar to the Virtal Machine name (for example "IE8WIN7-20200116-184345.raw") but has been renamed to "image.dmp" in the examples below.
