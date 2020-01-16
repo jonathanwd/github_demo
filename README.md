@@ -10,15 +10,11 @@ You may need to restart the VM after installation.
 While there are more recent versions of Volatility, we will use version 2.5 because it will run on a 32-bit machine.
 * Save the Volatility zip file onto the VM and extract its contents.
 
-## Download DumpIt
-* Downloading DumpIt requires an account from https://my.comae.com/. Comae accounts are free for personal non-commercial use. 
-* Once you have created an account, DumpIt can be downloaded from https://my.comae.com/tools/.
-* Save the DumpIt zip file onto the VM and extract its contents. 
-
 ## Obtain Memory Image Using DumpIt
+* You can download the DumpIt executable from https://github.com/thimbleweed/All-In-USB/tree/master/utilities/DumpIt
 * Open a command prompt on the VM.
 * Navigate to the folder containing "DumpIt.exe".
-* Run DumpIt: `DumpIt.exe /OUTPUT image.dmp`
+* Run DumpIt: `DumpIt.exe`. Dumpit will produce a memory image with a name similar to the Virtal Machine name (for example "IE8WIN7-20200116-184345.raw") but has been renamed to "image.dmp" in the examples below.
 
 ## Retrieve Password Using Volatility
 
