@@ -2,12 +2,12 @@
 
 ## Download and Install Windows 7 Virtual Machine
 * Windows 7 VMs can be downloaded from Microsoft at https://developer.microsoft.com/en-us/microsoft-edge/tools/vms/. 
-These instructions will only work on a 64-bit VM and were tested on the "IE11 on Win7" VM for VMware.
 * Install the VM on the platform of your choice. These VMs expire after 90 days, so Microsoft recommends creating a snapshot after the initial installation. 
 You may need to restart the VM after installation. 
 
 ## Download Volatility
-* Volatility can be downloaded from http://downloads.volatilityfoundation.org/releases/2.6/volatility_2.6_win64_standalone.zip.
+* Volatility can be downloaded from https://www.volatilityfoundation.org/25.
+While there are recent versions of Volatility, we will use version 2.5 because it will run on a 32-bit machine.
 * Save the zip file onto the VM and extract its contents.
 
 ## Download DumpIt
@@ -21,15 +21,17 @@ You may need to restart the VM after installation.
 * Run DumpIt: `DumpIt.exe /OUTPUT image.dmp`
 
 ## Retrieve Password Using Volatility
-* Copy the memory image "image.dmp" to the folder containing "volatility_2.6_win64_standalone.exe".
-* To retrieve the password you will need to know the volatility profile (the profile is based on the operating system and service pack version, it should be "Win7SP1x64" for the "IE11 on Win7" VM).
+* Copy the memory image "image.dmp" to the folder containing "volatility-2.5.standalone.exe".
+
+### Find the Volatility profile
+* Run `volatility-2.5.standalone.exe -f image.dmp imageinfo` to find the profile (based on the operating system and service pack version, "Win7SP1x86" in the examples below).
 
 ### Dump Registry Hives
-* Run  `volatility_2.6_win64_standalone.exe -f image.dmp --profile=Win7SP1x64 hivelist` to see the registry hive offsets.
-* We will need the SYSTEM (-y) and SAM (-s) virtual offests (0xfffff8a000024010 and 0xfffff8a00278c010 in the example below).
+* Run  `volatility-2.5.standalone.exe -f image.dmp --profile=Win7SP1x86 hivelist` to see the registry hive offsets.
+* We will need the SYSTEM (-y) and SAM (-s) virtual offests (0x87a1c008 and 0x8a4299c8 in the example below).
 
 ### Dump Password Hashes
-* Run `volatility_2.6_win64_standalone.exe -f image.dmp --profile=Win7SP1x64 hashdump -y 0xfffff8a000024010 -s 0xfffff8a00278c010 > hashes.txt` to dump the password hashes. Be sure to replace the virtual offsets with the ones you found in the previous step. 
+* Run `volatility-2.5.standalone.exe -f image.dmp --profile=Win7SP1x86 hashdump -y 0x87a1c008 -s 0x8a4299c8 > hashes.txt` to dump the password hashes. Be sure to replace the virtual offsets with the ones you found in the previous step. 
 * View the hashes in the command prompt: `type hashes.txt`
 * Copy the hashes to https://crackstation.net/ to crack the passwords (the NTLM hash is the part between the third colon and the final three colons).
 
