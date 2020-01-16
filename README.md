@@ -21,9 +21,9 @@ While there are more recent versions of Volatility, we will use version 2.5 beca
 * Run DumpIt: `DumpIt.exe /OUTPUT image.dmp`
 
 ## Retrieve Password Using Volatility
-* Copy the memory image "image.dmp" to the folder containing "volatility-2.5.standalone.exe".
 
 ### Find the Volatility profile
+* Copy the memory image "image.dmp" to the folder containing "volatility-2.5.standalone.exe".
 * Run `volatility-2.5.standalone.exe -f image.dmp imageinfo` to find the profile (based on the operating system and service pack version, "Win7SP1x86" in the examples below).
 
 ### Dump Registry Hives
