@@ -8,12 +8,12 @@ You may need to restart the VM after installation.
 ## Download Volatility
 * Volatility can be downloaded from http://downloads.volatilityfoundation.org/releases/2.5/volatility_2.5.win.standalone.zip.
 While there are more recent versions of Volatility, we will use version 2.5 because it will run on a 32-bit machine.
-* Save the zip file onto the VM and extract its contents.
+* Save the Volatility zip file onto the VM and extract its contents.
 
 ## Download DumpIt
 * Downloading DumpIt requires an account from https://my.comae.com/. Comae accounts are free for personal non-commercial use. 
 * Once you have created an account, DumpIt can be downloaded from https://my.comae.com/tools/.
-* Save the zip file onto the VM and extract its contents. 
+* Save the DumpIt zip file onto the VM and extract its contents. 
 
 ## Obtain Memory Image Using DumpIt
 * Open a command prompt on the VM.
