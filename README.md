@@ -7,7 +7,7 @@ You may need to restart the VM after installation.
 
 ## Download Volatility
 * Volatility can be downloaded from https://www.volatilityfoundation.org/25.
-While there are recent versions of Volatility, we will use version 2.5 because it will run on a 32-bit machine.
+While there are more recent versions of Volatility, we will use version 2.5 because it will run on a 32-bit machine.
 * Save the zip file onto the VM and extract its contents.
 
 ## Download DumpIt
