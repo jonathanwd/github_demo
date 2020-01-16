@@ -1,6 +1,6 @@
 # User Password Retreival From Memory Dump
 
-## Download and Install Windows 7 Virtual Machine
+## Download and Install 32-bit Windows 7 Virtual Machine
 * Windows 7 VMs can be downloaded from Microsoft at https://developer.microsoft.com/en-us/microsoft-edge/tools/vms/. 
 * Install the VM on the platform of your choice. These VMs expire after 90 days, so Microsoft recommends creating a snapshot after the initial installation. 
 You may need to restart the VM after installation. 
